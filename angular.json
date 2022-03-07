@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "salao-digital-front": {
+    "refeicao-digital-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/salao-digital-front",
+            "outputPath": "dist/refeicao-digital-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "salao-digital-front:build:production"
+              "browserTarget": "refeicao-digital-front:build:production"
             },
             "development": {
-              "browserTarget": "salao-digital-front:build:development"
+              "browserTarget": "refeicao-digital-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "salao-digital-front:build"
+            "browserTarget": "refeicao-digital-front:build"
           }
         },
         "test": {
@@ -133,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "salao-digital-front"
+  "defaultProject": "refeicao-digital-front"
 }
