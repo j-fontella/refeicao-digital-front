@@ -8,8 +8,8 @@
           <p id="msgErro"></p>
         </div>
         <div class="col-12">
-          <label for="usuario">Email:</label>
-          <input id="usuario" class="col-12" type="text" pInputText />
+          <label for="email">Email:</label>
+          <input id="email" class="col-12" type="text" pInputText />
         </div>
         <div class="col-12 campoRegistro" id="nomeRegistro" style="display: none">
           <label for="nome">Nome:</label>
@@ -74,10 +74,10 @@
           ></button>
         </div>
         <div class="col-6">
-          <p id="labelEsqueciSenha" class="label-registro" (click)="esqueciSenha()">Esqueceu sua senha?</p>
+          <p style="cursor: pointer" id="labelEsqueciSenha" class="label-registro" (click)="esqueciSenha()">Esqueceu sua senha?</p>
         </div>
         <div class="col-6">
-          <p id="labelRegistro" class="label-registro" (click)="alterarTextoRegistro()">Criar nova conta.</p>
+          <p style="cursor: pointer" id="labelRegistro" class="label-registro" (click)="alterarLoginRegistro()">Criar nova conta.</p>
         </div>
 
       </div>
