@@ -4,7 +4,6 @@ body {
   background-color: #4169E1;
 }
 
-
 .square-button {
   display: flex;
   flex-direction: column;
@@ -41,10 +40,23 @@ body {
   }
 }
 
-
 .item-menu {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%; /* Garante que a div col-6 ocupe toda a altura */
+}
+
+.item-menu-d {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100%; /* Garante que a div col-6 ocupe toda a altura */
+}
+
+.item-menu-e {
+  display: flex;
+  justify-content: left;
   align-items: center;
   height: 100%; /* Garante que a div col-6 ocupe toda a altura */
 }
