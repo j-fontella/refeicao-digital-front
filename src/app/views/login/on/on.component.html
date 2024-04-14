@@ -20,48 +20,40 @@
           <input id="senha" class="col-12" type="password" pInputText />
         </div>
         <div class="col-12 campoRegistro">
-          <label for="docregistro">CPF/CNPJ:</label>
-          <input id="docregistro" class="col-12" type="text" pInputText />
+          <label for="docRegistro">CPF/CNPJ:</label>
+          <input id="docRegistro" class="col-12" type="text" pInputText />
         </div>
         <div class="col-12 campoRegistro">
           <label for="cep">CEP:</label>
-          <input id="cep" (change)="getEnderecoPorCEP()" class="col-12" type="text" pInputText />
+          <input id="cep" (change)="getEnderecoPorCEP()" class="col-12 endereco" type="text" pInputText />
         </div>
         <div class="col-6 campoRegistro">
           <label for="logradouro">Logradouro:</label>
-          <input id="logradouro" class="col-12" type="text" pInputText disabled />
+          <input id="logradouro" class="col-12 endereco" type="text" pInputText disabled />
         </div>
         <div class="col-6 campoRegistro">
           <label for="numero">Numero:</label>
-          <input id="numero" class="col-12" type="text" pInputText />
+          <input id="numero" class="col-12 endereco" type="text" pInputText />
         </div>
         <div class="col-6 campoRegistro">
           <label for="complemento">Complemento:</label>
-          <input id="complemento" class="col-12" type="text" pInputText />
+          <input id="complemento" class="col-12 endereco" type="text" pInputText />
         </div>
         <div class="col-6 campoRegistro">
           <label for="bairro">Bairro:</label>
-          <input id="bairro" class="col-12" type="text" pInputText disabled />
+          <input id="bairro" class="col-12 endereco" type="text" pInputText disabled />
         </div>
         <div class="col-6 campoRegistro">
           <label for="cidade">Cidade:</label>
-          <input id="cidade" class="col-12" type="text" pInputText disabled />
+          <input id="cidade" class="col-12 endereco" type="text" pInputText disabled />
         </div>
         <div class="col-6 campoRegistro">
           <label for="uf">UF:</label>
-          <input id="uf" class="col-12" type="text" pInputText disabled />
-        </div>
-        <div class="col-6 campoRegistro">
-          <label for="conselho">Conselho:</label>
-          <input id="conselho" class="col-12" type="text" pInputText />
-        </div>
-        <div class="col-6 campoRegistro">
-          <label for="numeroconselho">Número do conselho:</label>
-          <input id="numeroconselho" class="col-12" type="text" pInputText />
+          <input id="uf" class="col-12 endereco" type="text" pInputText disabled />
         </div>
         <div class="col-12 campoRegistro">
-          <label for="profissao">Profissão:</label>
-          <input id="profissao" class="col-12" type="text" pInputText />
+          <label for="nomeConta">Estabelecimento:</label>
+          <input id="nomeConta" class="col-12" type="text" pInputText />
         </div>
         <div class="col-12">
           <button
@@ -77,7 +69,7 @@
           <p style="cursor: pointer" id="labelEsqueciSenha" class="label-registro" (click)="esqueciSenha()">Esqueceu sua senha?</p>
         </div>
         <div class="col-6">
-          <p style="cursor: pointer" id="labelRegistro" class="label-registro" (click)="alterarLoginRegistro()">Criar nova conta.</p>
+          <p style="cursor: pointer; float: right" id="labelRegistro" class="label-registro" (click)="alterarLoginRegistro()">Criar nova conta.</p>
         </div>
 
       </div>

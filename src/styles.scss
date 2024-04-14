@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #4169E1;
+}
+
+
+.square-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Largura do botão */
+  height: 80px; /* Altura do botão */
+  background-color: #3498db; /* Cor de fundo */
+  text-align: center;
+  color: white; /* Cor do texto e do ícone */
+  cursor: pointer; /* Cursor ao passar por cima */
+}
+
+.square-button .material-icons {
+  font-size: 24px; /* Tamanho do ícone */
+}
+
+.square-button .button-text {
+  font-size: 10px; /* Tamanho do texto */
+}
+
+@media (min-width: 768px) {
+  .square-button {
+    width: 100px; /* Largura do botão em telas maiores */
+    height: 100px; /* Altura do botão em telas maiores */
+  }
+
+  .square-button .material-icons {
+    font-size: 32px; /* Tamanho do ícone em telas maiores */
+  }
+
+  .square-button .button-text {
+    font-size: 12px; /* Tamanho do texto em telas maiores */
+  }
+}
+
+
+.item-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Garante que a div col-6 ocupe toda a altura */
+}

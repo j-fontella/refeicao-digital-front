@@ -61,7 +61,7 @@ export class OnComponent implements OnInit {
   }
 
   getEnderecoPorCEP() {
-
+      this.utils.formataDadosEndereco()
   }
 
   private logarUsuario() {
@@ -74,6 +74,7 @@ export class OnComponent implements OnInit {
 
   public registrarUsuario(){
     let body = this.utils.getJsonRequisicao(['endereco']);
+    console.log(body)
     let requisicao = this.loginService.cadastrarUsuario(body)
     this.utils.processarRequisicao(requisicao, "Usuário registrado com sucesso", "Erro ao registrar usuário.", null)
   }
