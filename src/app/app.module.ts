@@ -10,12 +10,16 @@ import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {HttpClientModule} from "@angular/common/http";
 import { MenuComponent } from './views/menu/menu.component';
+import { RecuperacaoSenhaComponent } from './views/login/recuperacao-senha/recuperacao-senha.component';
+import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao-senha.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnComponent,
-    MenuComponent
+    MenuComponent,
+    RecuperacaoSenhaComponent,
+    AlteracaoSenhaComponent
   ],
     imports: [
         BrowserModule,

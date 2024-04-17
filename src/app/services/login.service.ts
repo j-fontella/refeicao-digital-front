@@ -27,6 +27,16 @@ export class LoginService {
           sessionStorage.setItem("ust" , JSON.stringify(loginResponse))
         )))
   }
+  
+  public recuperarSenha(body:any){
+    let uri = this.apiUrl + "recuperar/"
+    return this.httpClient.post(uri,body)
+  }
+
+  public alterarSenha(body:any){
+    let uri = this.apiUrl + "alterar/"
+    return this.httpClient.post(uri,body)
+  }
 
   public getUsuarioLogado(){
     let userStatus = JSON.parse(<string>sessionStorage.getItem('ust'));

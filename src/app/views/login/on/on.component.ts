@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UtilsService} from "../../../services/utils.service";
 import {LoginService} from "../../../services/login.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-on',
@@ -16,6 +17,7 @@ export class OnComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private utils : UtilsService,
+    private router : Router
   ) {
   }
 
@@ -54,10 +56,20 @@ export class OnComponent implements OnInit {
     let msgErro = document.querySelector("#msgErro") as HTMLElement;
     msgErro.innerHTML = "";
 
+    this.alterarTamanhoColuna(document.querySelector("#emailRegistro") as HTMLElement)
+    this.alterarTamanhoColuna(document.querySelector("#senhaRegistro") as HTMLElement)
+
+  }
+
+  alterarTamanhoColuna(element : HTMLElement){
+    let colSize = "col-";
+    colSize += this.operacao ? "12" : "6";
+    element.className = "";
+    element.className = colSize;
   }
 
   esqueciSenha() {
-
+    this.router.navigate(['recuperacao-senha'])
   }
 
   getEnderecoPorCEP() {
