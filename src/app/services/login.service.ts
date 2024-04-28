@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {tap} from "rxjs/operators";
 
@@ -27,7 +27,7 @@ export class LoginService {
           sessionStorage.setItem("ust" , JSON.stringify(loginResponse))
         )))
   }
-  
+
   public recuperarSenha(body:any){
     let uri = this.apiUrl + "recuperar/"
     return this.httpClient.post(uri,body)
@@ -38,13 +38,13 @@ export class LoginService {
     return this.httpClient.post(uri,body)
   }
 
-  public getUsuarioLogado(){
-    let userStatus = JSON.parse(<string>sessionStorage.getItem('ust'));
-    if(!userStatus || !userStatus.token || !userStatus.prk){
-      alert("Faça o login novamente")
-      return this.router.navigate(['on'])
-    }
-    return userStatus
+  public getUnidades(prkUsuario: any, token: any) {
+    const headers = new HttpHeaders({
+      'token': `${token}`
+    });
+
+    let uri = this.apiUrl + `unidades/${prkUsuario}`;
+    return this.httpClient.get(uri, { headers: headers });
   }
 
 }

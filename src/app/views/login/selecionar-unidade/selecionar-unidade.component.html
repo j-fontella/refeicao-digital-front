@@ -1,0 +1,30 @@
+<div class="menu-principal grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid menu-grid">
+        <div class="col-12 text-center">
+          <h2>Refeição Digital</h2>
+          <p id="msgErro"></p>
+        </div>
+
+        <div class="col-12 text-center">
+          <div class="dropdown-container">
+            <p-dropdown [options]="unidades" [(ngModel)]="unidade" optionLabel="nome" [showClear]="true" placeholder="Selecione uma Unidade"></p-dropdown>
+          </div>
+        </div>
+
+        <div class="col-12 text-center"> <!-- Modificado para 'text-center' -->
+          <button
+            pButton
+            type="button"
+            label="Selecionar Unidade"
+            class="col-4"
+            id="selecionarUnidade"
+            (click)="selecionarUnidade()"
+          ></button>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

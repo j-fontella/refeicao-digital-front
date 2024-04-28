@@ -80,13 +80,12 @@ export class OnComponent implements OnInit {
     // @ts-ignore
     let body = this.utils.getJsonRequisicao([]);
     let requisicao = this.loginService.logarUsuario(body)
-    this.utils.processarRequisicao(requisicao, null, "Erro ao efetuar login.", "menu");
+    this.utils.processarRequisicao(requisicao, null, "Erro ao efetuar login.", "selecionar-unidade");
   }
 
 
   public registrarUsuario(){
     let body = this.utils.getJsonRequisicao(['endereco']);
-    console.log(body)
     let requisicao = this.loginService.cadastrarUsuario(body)
     this.utils.processarRequisicao(requisicao, "Usuário registrado com sucesso", "Erro ao registrar usuário.", null)
   }

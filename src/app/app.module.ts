@@ -12,6 +12,10 @@ import {HttpClientModule} from "@angular/common/http";
 import { MenuComponent } from './views/menu/menu.component';
 import { RecuperacaoSenhaComponent } from './views/login/recuperacao-senha/recuperacao-senha.component';
 import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao-senha.component';
+import {SelecionarUnidadeComponent} from "./views/login/selecionar-unidade/selecionar-unidade.component";
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao
     OnComponent,
     MenuComponent,
     RecuperacaoSenhaComponent,
-    AlteracaoSenhaComponent
+    AlteracaoSenhaComponent,
+    SelecionarUnidadeComponent
   ],
     imports: [
         BrowserModule,
@@ -28,7 +33,9 @@ import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao
         CardModule,
         ButtonModule,
         InputTextModule,
-        HttpClientModule
+        HttpClientModule,
+        DropdownModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

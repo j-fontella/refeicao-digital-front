@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {OnComponent} from "./views/login/on/on.component";
 import {MenuComponent} from "./views/menu/menu.component";
-import { RecuperacaoSenhaComponent } from './views/login/recuperacao-senha/recuperacao-senha.component';
-import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao-senha.component';
-import { AuthServiceService } from './services/auth-service.service';
+import {RecuperacaoSenhaComponent} from './views/login/recuperacao-senha/recuperacao-senha.component';
+import {AlteracaoSenhaComponent} from './views/login/alteracao-senha/alteracao-senha.component';
+import {SelecionarUnidadeComponent} from "./views/login/selecionar-unidade/selecionar-unidade.component";
 
 const routes: Routes = [
   {
@@ -14,7 +14,6 @@ const routes: Routes = [
   {
     path : "menu",
     component : MenuComponent,
-    canActivate : [AuthServiceService]
   },
   {
     path : "recuperacao-senha",
@@ -23,6 +22,10 @@ const routes: Routes = [
   {
     path : "alteracao-senha",
     component : AlteracaoSenhaComponent
+  },
+  {
+    path : "selecionar-unidade",
+    component : SelecionarUnidadeComponent
   },
   {
     path : "**", redirectTo : 'on'

@@ -159,4 +159,13 @@ export class UtilsService {
     return msg;
   }
 
+  public getUsuarioLogado(){
+    let userStatus = JSON.parse(<string>sessionStorage.getItem('ust'));
+    if(!userStatus || !userStatus.token || !userStatus.prk){
+      alert("Faça o login novamente")
+      return this.router.navigate(['on'])
+    }
+    return userStatus
+  }
+
 }
