@@ -15,6 +15,7 @@ import { AlteracaoSenhaComponent } from './views/login/alteracao-senha/alteracao
 import {SelecionarUnidadeComponent} from "./views/login/selecionar-unidade/selecionar-unidade.component";
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import {CadastroProdutoComponent} from "./views/produto/cadastro-produto/cadastro-produto.component";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     RecuperacaoSenhaComponent,
     AlteracaoSenhaComponent,
-    SelecionarUnidadeComponent
+    SelecionarUnidadeComponent,
+    CadastroProdutoComponent
   ],
     imports: [
         BrowserModule,
